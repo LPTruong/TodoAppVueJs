@@ -1,4 +1,5 @@
-# todoapp
+# To Do App
+![image info](./src/assets/Screenshot%202022-03-11%20130853.png)
 
 ## Project setup
 ```
@@ -22,3 +23,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
