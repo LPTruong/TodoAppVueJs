@@ -13,22 +13,22 @@
       <div class="square" style="--i:6;"> </div>
 
 
-      <h3 class="app-header">Danh sách các việc cần làm</h3>
+      <h3 class="app-header">Danh sách các việc chưa làm</h3>
       <div class="app-input">
           <input type="text" autocomplete="off" placeholder="Add new task" class="task-input" v-model="tasks.description" @keyup.enter="newItem">
           <input type="submit" value = " " class="submit-task" title="Add task" @click="newItem">
       </div>
       <ul class="app-list" >
-        <li class="task-list-item" v-for="task of tasks.slice().reverse()" :key="task"> <!-- .slice().reverse()-->
-          <input v-if="task.completed == false" title = "Complete Task" type="checkbox" @click="completeTask(task)">
-          <input v-if="task.completed == true" class="checked" title = "Complete Task" type="checkbox">
-          <label class="task-list-item-label" >
-              <span>{{task.description}}</span>
-              
-          </label>  
-          <span class="edit-btn" title = "Edit Task" @click="editItem(task)"></span>
-          <span class="del-btn" title="Delete Task" @click="deleteTask(task)">{{task.del}}</span>
-        </li>
+        <template v-for="task of tasks.slice().reverse()" :key="task">
+          <li class="task-list-item" v-if="task.completed == false"> <!-- .slice().reverse()-->
+            <input title = "Complete Task" type="checkbox"  @click="complete(task)" >
+            <label class="task-list-item-label">
+                <span>{{task.description}}</span>
+            </label>  
+            <span class="edit-btn" title = "Edit Task" @click="editItem(task)"></span>
+            <span class="del-btn" title="Delete Task" @click="delItem(task)">{{task.del}}</span>
+          </li>
+        </template>
       </ul>
     </div>
   </div>

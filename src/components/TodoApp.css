@@ -25,17 +25,20 @@ body {
     height: auto;
 }
 .width-500 {
+    margin:auto;
     width: 500px;
+    display: flex;
+    justify-content: center;
     
 }
 .formTodo {
+    width: 400px;
     position: relative;
     display: block;
-    margin-top: 80px;
     padding: 30px 30px;
     background-color:rgba(255,255,255, 0.2);
     border-radius: 10px;
-    height: 550px;
+    height: 500px;
     /* backdrop-filter: blur(10px); */
     box-shadow:   0 25px 35px rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -124,6 +127,8 @@ body {
 }
 .app-header {
     text-align: center;
+    margin-top: 10px ;
+    margin-bottom: 20px;
 }
 .submit-task{
     width: 36px;
@@ -180,6 +185,7 @@ body {
     padding: 8px;
     border-radius: 35px;
     margin-bottom: 15px;
+    margin-right: 5px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -207,6 +213,14 @@ body {
     background: #272727; 
     border-radius: 5px;
   }
+.task-list-item .checked {
+    background-size: 18px;
+}
+
+.task-list-item .checked + .task-list-item-label span{
+    color: #272727;
+    text-decoration: line-through #272727;
+}
 
 .task-list-item input:checked {
     background-size: 18px;

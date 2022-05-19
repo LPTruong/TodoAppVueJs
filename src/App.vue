@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <TodoApp/>
+    <Header/>
+    <router-view />
   </div>
   
 </template>
 
 <script>
-import TodoApp from './components/TodoApp.vue'
-
+import Header from './components/Header.vue'
 export default {
   name: 'App',
   components: {
-    TodoApp
+    Header
   }
 }
 </script>
